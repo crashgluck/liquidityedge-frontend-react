@@ -5,7 +5,7 @@ import ForgotPassword from './features/auth-investor/pages/login/ForgotPassword.
 import CompanyProfileStep1 from './features/auth-investor/pages/register/CompanyProfileStep1.jsx';
 
 // Importa el nuevo componente de flujo
-import CompanyProfileFlow from './features/auth-investor/pages/register/CompanyProfileFlow.jsx';
+
 import CompanyProfileStep2 from './features/auth-investor/pages/register/CompanyProfileStep2.jsx';
 import CompanyProfileStep3 from './features/auth-investor/pages/register/CompanyProfileStep3.jsx';
 import VerifyCompanyEmail from './features/auth-investor/pages/register/VerifyCompanyEmail.jsx';

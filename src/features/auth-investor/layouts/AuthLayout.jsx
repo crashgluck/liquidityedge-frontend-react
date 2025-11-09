@@ -1,11 +1,12 @@
 export default function AuthLayout({ children }) {
   return (
-    <div className="relative min-h-screen bg-[url('/pattern.jpg')] bg-repeat bg-center ">
+    <div className="relative min-h-screen bg-[url('/pattern.jpg')] bg-cover bg-center ">
       {/* Capa azul translúcida + blur */}
-      <div className="absolute inset-0 bg-blue-900/30 backdrop-blur-md" />
+      <div className="absolute inset-0 bg-[#001449]/60 backdrop-blur-xs" />
+ 
 
       {/* Contenido encima */}
-      <header className="relative py-8 mb-32 text-center text-white text-3xl font-semibold">
+      <header className="relative py-8 mb-14 text-center text-white text-3xl font-semibold">
         LiquidityEdge
       </header>
 

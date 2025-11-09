@@ -15,7 +15,7 @@ export default function CompanyEmailVerified() {
 
   return (
     <AuthLayout>
-      <Card className="backdrop-blur-md bg-blue-950/70 text-white p-8 mx-3 border border-white/30 rounded-xl shadow-lg w-96">
+      <Card>
         <h2 className="text-2xl font-bold mb-8 text-center">
           Your application is being reviewed
         </h2>

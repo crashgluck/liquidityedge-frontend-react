@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import AuthLayout from "../../layouts/AuthLayout";
+import Card from "../../../../shared/components/Card";
 
 export default function Verify2FAPage() {
   const navigate = useNavigate();
@@ -46,7 +47,8 @@ export default function Verify2FAPage() {
 
   return (
     <AuthLayout>
-      <div className="backdrop-blur-md bg-blue-950/70 p-8 rounded-xl text-white border border-white/20 w-96 text-center mx-auto mt-20">
+      <Card className="text-center mx-auto">
+        <div >
         <h1 className="text-2xl font-bold mb-4">Security Verification</h1>
         <p className="mb-4 text-sm">
           A code has been sent to your email. Enter the code to continue.
@@ -78,6 +80,7 @@ export default function Verify2FAPage() {
           </button>
         </form>
       </div>
+      </Card>
     </AuthLayout>
   );
 }

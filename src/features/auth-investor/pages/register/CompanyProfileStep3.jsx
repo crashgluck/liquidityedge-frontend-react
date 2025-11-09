@@ -10,6 +10,7 @@ export default function CompanyProfileStep3() {
   const [password, setPassword] = useState("");
   const [repeatPassword, setRepeatPassword] = useState("");
   const [termsAccepted, setTermsAccepted] = useState(false);
+  const [showTerms, setShowTerms] = useState(false);
   const [error, setError] = useState({
     mobile: "",
     password: "",
@@ -66,7 +67,8 @@ export default function CompanyProfileStep3() {
 
   return (
     <AuthLayout>
-      <Card className="backdrop-blur-md bg-blue-950/70 text-white p-8 mx-3 border border-white/30 rounded-xl shadow-lg w-96">
+      {/* Main card */}
+      <Card >
         <div className="flex items-center mb-6">
           <div className="flex space-x-2 mr-4">
             <span className="w-8 h-1 bg-white/30 rounded-full"></span>
@@ -136,15 +138,13 @@ export default function CompanyProfileStep3() {
 
           {/* Terms and Conditions */}
           <div className="my-4 flex items-start space-x-2">
-            <input
-              type="checkbox"
-              checked={termsAccepted}
-              onChange={(e) => setTermsAccepted(e.target.checked)}
-              className="w-4 h-4 accent-blue-500 mt-1"
-            />
+           
             <label className="text-white/80 text-sm">
               Please read and accept the{" "}
-              <span className="text-blue-400 underline cursor-pointer">
+              <span
+                onClick={() => setShowTerms(true)}
+                className="text-blue-400 underline cursor-pointer"
+              >
                 Terms and Conditions
               </span>{" "}
               before continuing.
@@ -175,6 +175,55 @@ export default function CompanyProfileStep3() {
           </div>
         </form>
       </Card>
+
+      {/* Terms Modal */}
+      {showTerms && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black/60 backdrop-blur-sm z-50">
+          <Card className="bg-blue-950/80 text-white p-6 w-[90%] max-w-lg rounded-xl border border-white/30 shadow-xl">
+            <h3 className="text-xl font-semibold mb-4">Terms and Conditions</h3>
+            <div className="max-h-60 overflow-y-auto pr-2 text-sm text-white/80 space-y-2">
+              <p>
+                By creating an account, you agree to comply with all applicable
+                laws and platform rules. You are responsible for the accuracy of
+                the information provided and for keeping your credentials
+                secure.
+              </p>
+              <p>
+                The platform reserves the right to suspend or terminate accounts
+                for misuse, fraudulent activity, or violation of terms.
+              </p>
+              <p>
+                Personal data will be processed in accordance with our privacy
+                policy and used only for service-related purposes.
+              </p>
+            </div>
+
+            <div className="flex justify-start mt-6">
+              <div className="my-4 flex items-start space-x-2">
+            <input
+              type="checkbox"
+              checked={termsAccepted}
+              onChange={(e) => setTermsAccepted(e.target.checked)}
+              className="w-4 h-4 accent-blue-500 mt-1"
+            />
+            <label className="text-white/80 text-sm">
+             I have read and accept the Terms and Conditions 
+            </label>
+          </div>
+              
+            </div>
+
+            <div className="flex justify-end mt-6">
+              <button
+                onClick={() => setShowTerms(false)}
+                className="bg-blue-700 px-4 py-2 rounded-md hover:bg-blue-800 transition-colors font-semibold"
+              >
+                Close
+              </button>
+            </div>
+          </Card>
+        </div>
+      )}
     </AuthLayout>
   );
 }

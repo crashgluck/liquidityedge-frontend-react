@@ -34,7 +34,7 @@ export default function CreateCompanyProfile() {
 
   return (
     <AuthLayout>
-      <Card className="backdrop-blur-md bg-blue-950/70 text-white p-8 mx-3 border border-white/30 rounded-xl shadow-lg w-96">
+      <Card >
         <div className="flex items-center mb-6">
           <div className="flex space-x-2 mr-4">
             <span className="w-8 h-1 bg-white rounded-full"></span>
@@ -104,7 +104,7 @@ export default function CreateCompanyProfile() {
             <p className="text-white/70">
               Already have an account?{" "}
               <Link
-                to="/login"
+                to="/"
                 className="font-semibold text-blue-400 hover:text-blue-300 transition-colors"
               >
                 Sign in
