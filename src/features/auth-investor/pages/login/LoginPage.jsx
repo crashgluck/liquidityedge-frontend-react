@@ -84,7 +84,7 @@ export default function App() {
               className="border w-full p-2 mb-2 rounded"
             />
             <div className="text-end p-2">
-              <p className="cursor-pointer hover:underline"><Link to="/about">Forgot password?</Link></p>
+              <p className="cursor-pointer hover:underline"><Link to="/forgot-password">Forgot password?</Link></p>
             </div>
           </div>
 
