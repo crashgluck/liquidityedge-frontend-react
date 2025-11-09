@@ -46,7 +46,7 @@ export default function Verify2FAPage() {
 
   return (
     <AuthLayout>
-      <div className="bg-white/10 backdrop-blur-md p-8 rounded-xl text-white border border-white/20 w-96 text-center mx-auto mt-20">
+      <div className="backdrop-blur-md bg-blue-950/70  p-8 rounded-xl text-white border border-white/20 w-96 text-center mx-auto mt-20">
         <h1 className="text-2xl font-bold mb-4">Verificación de seguridad</h1>
         <p className="mb-4 text-sm">
           Se ha enviado un código a tu correo. Ingresa el código para continuar.

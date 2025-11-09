@@ -50,7 +50,7 @@ export default function ForgotPassword() {
 
   return (
     <AuthLayout>
-      <Card className="backdrop-blur-md text-white p-8 mx-3 border border-white/30 rounded-xl shadow-lg w-96">
+      <Card className="backdrop-blur-md bg-blue-950/70   text-white p-8 mx-3 border border-white/30 rounded-xl shadow-lg w-96">
         <h1 className="text-2xl font-bold mb-8 text-center">Forgot your password?</h1>
 
         <form onSubmit={handleSubmit}>
