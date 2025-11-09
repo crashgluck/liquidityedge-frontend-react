@@ -1,12 +1,12 @@
 import { useState } from "react";
-import Card from "../../../../shared/components/Card";
-import AuthLayout from "../../layouts/AuthLayout";
+import Card from "../../../../../shared/components/Card";
+import AdminAuthLayout from "../../../layouts/AdminAuthLayout";
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-  
 
 
-export default function LoginPage() {
+
+export default function LoginPageAdmin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
@@ -44,7 +44,7 @@ export default function LoginPage() {
   // Si pasa validaciones, hacer "login"
   try {
     await login(email, password); // tu función mock
-    navigate('/verify-2-FA'); 
+    navigate('/admin/verify-2-FA'); 
   } catch (err) {
     setError(err.detail || "Error de autenticación");
   }
@@ -58,9 +58,14 @@ export default function LoginPage() {
 
 
   return (
-    <AuthLayout>
+    <AdminAuthLayout>
       <Card >
-        <h1 className="text-2xl font-bold mb-8 text-center">Sign in</h1>
+  
+        <div className="text-center">
+            <h1 className="text-2xl font-bold mb-8 ">Admin Log in</h1>
+        <p>Welcome back! Log in to access your tender opportunities.</p>
+        </div>
+
 
         <form onSubmit={handleSubmit}>
           <div className="my-3">
@@ -105,6 +110,6 @@ export default function LoginPage() {
           </div>
         </form>
       </Card>
-    </AuthLayout>
+    </AdminAuthLayout>
   );
 }
