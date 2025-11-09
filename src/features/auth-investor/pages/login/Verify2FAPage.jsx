@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import AuthLayout from "../../auth/layouts/AuthLayout";
+import AuthLayout from "../../layouts/AuthLayout";
 
 export default function Verify2FAPage() {
   const navigate = useNavigate();
@@ -40,7 +40,7 @@ export default function Verify2FAPage() {
 
     // Mock de verificación
     setTimeout(() => {
-      navigate("/dashboard");
+      navigate("/forgot-password");
     }, 500);
   };
 
