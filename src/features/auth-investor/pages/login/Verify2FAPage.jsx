@@ -10,12 +10,12 @@ export default function Verify2FAPage() {
 
   const handleChange = (e, index) => {
     const val = e.target.value;
-    if (/^\d?$/.test(val)) { // Solo permite un dígito
+    if (/^\d?$/.test(val)) { // Allow only one digit
       const newCode = [...code];
       newCode[index] = val;
       setCode(newCode);
 
-      // Mover foco al siguiente input
+      // Move focus to the next input
       if (val && index < 5) {
         inputsRef.current[index + 1].focus();
       }
@@ -34,11 +34,11 @@ export default function Verify2FAPage() {
 
     const fullCode = code.join("");
     if (fullCode.length < 6) {
-      setError("Ingresa los 6 dígitos del código");
+      setError("Enter all 6 digits of the code");
       return;
     }
 
-    // Mock de verificación
+    // Mock verification
     setTimeout(() => {
       navigate("/forgot-password");
     }, 500);
@@ -46,10 +46,10 @@ export default function Verify2FAPage() {
 
   return (
     <AuthLayout>
-      <div className="backdrop-blur-md bg-blue-950/70  p-8 rounded-xl text-white border border-white/20 w-96 text-center mx-auto mt-20">
-        <h1 className="text-2xl font-bold mb-4">Verificación de seguridad</h1>
+      <div className="backdrop-blur-md bg-blue-950/70 p-8 rounded-xl text-white border border-white/20 w-96 text-center mx-auto mt-20">
+        <h1 className="text-2xl font-bold mb-4">Security Verification</h1>
         <p className="mb-4 text-sm">
-          Se ha enviado un código a tu correo. Ingresa el código para continuar.
+          A code has been sent to your email. Enter the code to continue.
         </p>
 
         <form onSubmit={handleVerify} className="flex flex-col items-center">
@@ -74,7 +74,7 @@ export default function Verify2FAPage() {
             type="submit"
             className="w-full bg-blue-600 hover:bg-blue-700 text-white p-2 rounded"
           >
-            Verificar
+            Verify
           </button>
         </form>
       </div>

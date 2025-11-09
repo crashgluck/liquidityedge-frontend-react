@@ -1,46 +1,40 @@
 import { useState } from "react";
 import Card from "../../../../shared/components/Card";
 import AuthLayout from "../../layouts/AuthLayout";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 export default function CompanyEmailVerified() {
   const navigate = useNavigate();
-
-(false);
   const [error, setError] = useState(null);
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(null);
-
-   
-    // Ir al dashboard u otra página final
     navigate("/dashboard");
-   
-
   };
 
   return (
     <AuthLayout>
       <Card className="backdrop-blur-md bg-blue-950/70 text-white p-8 mx-3 border border-white/30 rounded-xl shadow-lg w-96">
-
-
         <h2 className="text-2xl font-bold mb-8 text-center">
-   Your application is being reviewed
+          Your application is being reviewed
         </h2>
+
         <p className="text-center py-2 mb-4">
-You will receive an email once your account has been verified and is ready to access the platform.        </p>
+          You will receive an email once your account has been verified and is ready
+          to access the platform.
+        </p>
+
         <p className="text-center">
-           Reviews are completed within 24-48 hours.
+          Reviews are typically completed within 24–48 hours.
         </p>
 
-          <p className="text-center">
-           Need help? Contact our support team at
+        <p className="text-center mt-4">
+          Need help? Contact our support team at{" "}
+          <span className="text-blue-400 underline cursor-pointer">
+            support@example.com
+          </span>
         </p>
-
-
-    
       </Card>
     </AuthLayout>
   );
