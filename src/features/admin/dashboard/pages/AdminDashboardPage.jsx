@@ -1,13 +1,12 @@
 import AdminDashboardLayout from "../../layouts/AdminDashboardLayout";
-import Breadcrumb from "../../components/Breadcrumb";
 
 export default function AdminDashboardPage() {
   return (
     <AdminDashboardLayout>
    
-    <main className="flex-1 p-4 md:p-8 overflow-y-auto">
+    <main className="flex-1 p-4 maaaaa:p-8 overflow-y-auto">
         <div className="pb-3 py-1">
-            <Breadcrumb></Breadcrumb>
+        
         </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         
