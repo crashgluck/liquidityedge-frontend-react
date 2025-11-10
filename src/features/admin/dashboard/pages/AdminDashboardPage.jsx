@@ -4,7 +4,7 @@ export default function AdminDashboardPage() {
   return (
     <AdminDashboardLayout>
    
-    <main className="flex-1 p-4 maaaaa:p-8 overflow-y-auto">
+    <main className="flex-1 p-4 m:p-8 overflow-y-auto">
         <div className="pb-3 py-1">
         
         </div>
