@@ -1,11 +1,16 @@
 import AdminDashboardLayout from "../../layouts/AdminDashboardLayout";
+import Breadcrumb from "../../components/Breadcrumb";
 
 export default function AdminDashboardPage() {
   return (
     <AdminDashboardLayout>
    
     <main className="flex-1 p-4 md:p-8 overflow-y-auto">
+        <div className="pb-3 py-1">
+            <Breadcrumb></Breadcrumb>
+        </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        
         <div className="bg-white rounded-2xl shadow-sm p-6">
           <p className="text-sm text-blue-500">Investors Pending Verification</p>
           <h2 className="text-3xl font-semibold mt-2">6</h2>

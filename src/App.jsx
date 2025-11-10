@@ -16,6 +16,7 @@ import AdminVerify2FAPage from './features/admin/auth/pages/login/AdminVerify2FA
 import AdminForgotPassword from './features/admin/auth/pages/login/AdminForgotPassword.jsx';
 import AdminDashboardLayout from './features/admin/layouts/AdminDashboardLayout.jsx';
 import AdminDashboardPage from './features/admin/dashboard/pages/AdminDashboardPage.jsx';
+import AdminFundManagers from './features/admin/dashboard/pages/AdminFundManagers.jsx';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
       <Route path="/admin/forgot-password" element={<AdminForgotPassword />} />
          {/* Admin dashboard */}
       <Route path="/admin/dashboard" element={<AdminDashboardPage />} />
+      <Route path="/admin/fund-manager" element={<AdminFundManagers />} />
       
       
       
